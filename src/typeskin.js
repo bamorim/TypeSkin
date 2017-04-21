@@ -138,6 +138,7 @@ T.Int = bits => T(T.Type, {
 T.Uint = bits => T(T.Type, {
   form: "a non-decimal positive JavaScript Number with " + bits + " bits",
   test: value => T.Number.test(value)
+    && value >= 0
     && Math.floor(value) === value
     && value < Math.pow(2, bits),
   rand: rand = () => Math.floor(Math.random() * Math.pow(2, bits))
