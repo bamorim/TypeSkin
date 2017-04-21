@@ -108,7 +108,7 @@ T.forall([T.Number, T.Number],
 
 // "last element is the first after reverse"
 T.forall([T.Array(T.Number)],
-  (a) => a.lenght === 0 || a[0] === reverse(a)[0]);
+  (a) => a.lenght === 0 || a[0] === reverse(a)[a.length-1]);
 
 // "concatenation adds lengths"
 T.forall([T.String, T.String],
